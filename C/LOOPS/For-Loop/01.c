@@ -116,6 +116,8 @@ void question7();
 void question8();
 void question9();
 void question10();
+void question11();
+void question12();
 
 int main()
 {
@@ -139,6 +141,10 @@ int main()
     question9();
     printf("********* Question number 10 Solution ************\n");
     question10();
+    printf("********* Question number 11 Solution ************\n");
+    question11();
+    printf("********* Question number 12 Solution ************\n");
+    question12();
     return 0;
 }
 
@@ -218,9 +224,9 @@ void question8()
 Write a program in C to display a pattern like a right angle triangle using an asterisk.
 The pattern like :
 *
-**
-***
-****
+* *
+* * *
+* * * *
 
 */
 void question9()
@@ -239,9 +245,9 @@ void question9()
 Write a C program to display a pattern like a right angle triangle with a number.
 The pattern like :
 1
-12
-123
-1234
+1 2
+1 2 3
+1 2 3 4
 */
 void question10()
 {
@@ -250,6 +256,48 @@ void question10()
         for (int j = 1; j <= i; j++)
         {
             printf("%d ", j);
+        }
+        printf("\n");
+    }
+}
+
+/* Question Number : 11
+Write a program in C to make such a pattern like a right angle triangle with a number which will repeat a number in a row.
+The pattern like :
+ 1
+ 2 2
+ 3 3 3
+ 4 4 4 4
+*/
+void question11()
+{
+    for (int i = 1; i <= 4; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            printf("%d ", i);
+        }
+        printf("\n");
+    }
+}
+
+/* Question Number : 12
+Write a program in C to make such a pattern like a right angle triangle with the number increased by 1.
+The pattern like :
+   1
+   2 3
+   4 5 6
+   7 8 9 10
+*/
+void question12()
+{
+    int num_increasing = 1;
+    for (int i = 1; i <= 4; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            printf("%d ", num_increasing);
+            num_increasing += 1;
         }
         printf("\n");
     }
