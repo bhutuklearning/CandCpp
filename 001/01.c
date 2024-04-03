@@ -28,11 +28,13 @@ The Sum is : 55
 void question2()
 {
     int sum = 0;
+    printf("The first 10 natural numbers are : \n");
     for (int i = 1; i <= 10; i++)
     {
+        printf("%d ", i);
         sum += i;
     }
-    printf("The sum is : %d\n", sum);
+    printf("\nThe sum is : %d\n", sum);
 }
 
 /* Question number 3:
@@ -109,12 +111,146 @@ void question5()
     }
 }
 
+void question6();
+void question7();
+void question8();
+void question9();
+void question10();
+
 int main()
 {
+    printf("********* Question number 1 Solution ************\n");
     question1();
+    printf("********* Question number 2 Solution ************\n");
     question2();
+    printf("********* Question number 3 Solution ************\n");
     question3();
+    printf("********* Question number 4 Solution ************\n");
     question4();
+    printf("********* Question number 5 Solution ************\n");
     question5();
+    printf("********* Question number 6 Solution ************\n");
+    question6();
+    printf("********* Question number 7 Solution ************\n");
+    question7();
+    printf("********* Question number 8 Solution ************\n");
+    question8();
+    printf("********* Question number 9 Solution ************\n");
+    question9();
+    printf("********* Question number 10 Solution ************\n");
+    question10();
     return 0;
+}
+
+/* Question Number : 6
+Write a program in C to display the multiplication table for a given integer.
+Test Data :
+Input the number (Table to be calculated) : 15
+Expected Output :
+15 X 1 = 15
+...
+...
+15 X 10 = 150
+*/
+void question6()
+{
+    int n;
+    printf("Input the number (Table to be calculated) : ");
+    scanf("%d", &n);
+    for (int i = 1; i <= 10; i++)
+    {
+        printf("%d x %d = %d \n", n, i, n * i);
+    }
+}
+
+/* Question Number : 7
+Write a program in C to display the multiplier table vertically from 1 to n.
+Test Data :
+Input upto the table number starting from 1 : 8
+Expected Output :
+Multiplication table from 1 to 8
+1x1 = 1, 2x1 = 2, 3x1 = 3, 4x1 = 4, 5x1 = 5, 6x1 = 6, 7x1 = 7, 8x1 = 8
+...
+1x10 = 10, 2x10 = 20, 3x10 = 30, 4x10 = 40, 5x10 = 50, 6x10 = 60, 7x10 = 70, 8x10 = 80
+*/
+void question7()
+{
+    int n;
+    printf("Input the table number from 1 to the desired number you want.\n");
+    scanf("%d", &n);
+    for (int i = 1; i <= 10; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            printf("%d x %d = %d, ", j, i, j * i);
+        }
+        printf("\n");
+    }
+}
+
+/* Question Number : 8
+Write a C program to display the n terms of odd natural numbers and their sum.
+Test Data
+Input number of terms : 10
+Expected Output :
+The odd numbers are :1 3 5 7 9 11 13 15 17 19
+The Sum of odd Natural Number upto 10 terms : 100
+*/
+void question8()
+{
+    int n = 1, number, sum = 0;
+    printf("Input the number of terms(for odd number finding program).\n");
+    scanf("%d", &number);
+    printf("The odd numbers are : ");
+    for (int i = 1; n <= number; i++)
+    {
+        if (i % 2 != 0)
+        {
+            printf("%d ", i);
+            sum += i;
+            n++;
+        }
+    }
+    printf("\nThe Sum of odd Natural Number upto %d terms : %d \n", number, sum);
+}
+
+/* Question Number : 9
+Write a program in C to display a pattern like a right angle triangle using an asterisk.
+The pattern like :
+*
+**
+***
+****
+
+*/
+void question9()
+{
+    for (int i = 1; i <= 4; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+}
+
+/* Question Number : 10
+Write a C program to display a pattern like a right angle triangle with a number.
+The pattern like :
+1
+12
+123
+1234
+*/
+void question10()
+{
+    for (int i = 1; i <= 4; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
 }
