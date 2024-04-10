@@ -1,6 +1,6 @@
 // Pass by Value and pass by reference
 #include <bits/stdc++.h>
-#include <iostream>
+
 using namespace std;
 
 // Pass by Value
