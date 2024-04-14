@@ -120,6 +120,8 @@ void question11();
 void question12();
 void question13();
 void question14();
+void question15();
+void question16();
 void question17();
 
 int main()
@@ -152,6 +154,10 @@ int main()
     question13();
     printf("********* Question number 14 Solution ************\n");
     question14();
+    printf("********* Question number 15 Solution ************\n");
+    question15();
+    printf("********* Question number 16 Solution ************\n");
+    question16();
     printf("********* Question number 17 Solution ************\n");
     question17();
     return 0;
@@ -369,6 +375,58 @@ void question14()
         }
         printf("\n");
     }
+}
+
+/* Question Number: 15
+15. Write a C program to calculate the factorial of a given number.
+Test Data :
+Input the number : 5
+Expected Output :
+The Factorial of 5 is: 120
+ */
+void question15()
+{
+    int number, result = 1;
+    printf("Input the number : ");
+    scanf("%d", &number);
+    if (number == 0)
+    {
+        printf("The Factorial of %d is: %d\n", number, 1);
+    }
+    else
+    {
+        for (int i = 1; i <= number; i++)
+        {
+            result *= i;
+        }
+        printf("The Factorial of %d is: %d\n", number, result);
+    }
+}
+
+/* Question Number: 16
+16. Write a C program to display the sum of n terms of even natural numbers.
+Test Data :
+Input number of terms : 5
+Expected Output :
+The even numbers are :2 4 6 8 10
+The Sum of even Natural Number upto 5 terms : 30
+ */
+void question16()
+{
+    int number, sum = 0, n = 1;
+    printf("Input the number of terms : ");
+    scanf("%d", &number);
+    printf("The even numbers are : ");
+    for (int i = 1; n <= number; i++)
+    {
+        if (i % 2 == 0)
+        {
+            printf("%d ", i);
+            sum += i;
+            n++;
+        }
+    }
+    printf("\nThe sum of even Natural Number upto %d terms : %d\n", number, sum);
 }
 
 /* Question Number 17
