@@ -118,6 +118,9 @@ void question9();
 void question10();
 void question11();
 void question12();
+void question13();
+void question14();
+void question17();
 
 int main()
 {
@@ -145,6 +148,12 @@ int main()
     question11();
     printf("********* Question number 12 Solution ************\n");
     question12();
+    printf("********* Question number 13 Solution ************\n");
+    question13();
+    printf("********* Question number 14 Solution ************\n");
+    question14();
+    printf("********* Question number 17 Solution ************\n");
+    question17();
     return 0;
 }
 
@@ -298,6 +307,93 @@ void question12()
         {
             printf("%d ", num_increasing);
             num_increasing += 1;
+        }
+        printf("\n");
+    }
+}
+
+/* Question Number : 13
+13. Write a program in C to make a pyramid pattern with numbers increased by 1.
+
+   1
+  2 3
+ 4 5 6
+7 8 9 10
+*/
+void question13()
+{
+    int count = 1;
+    for (int i = 1; i <= 4; i++)
+    {
+        for (int j = 1; j <= 4 - i; j++)
+        {
+            printf(" ");
+        }
+        for (int j = 1; j <= i; j++)
+        {
+            printf("%d ", count);
+            count++;
+        }
+        for (int j = 1; j <= 4 - i; j++)
+        {
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+
+/* Question Number : 14
+14. Write a C program to make such a pattern as a pyramid with an asterisk.
+
+   *
+  * *
+ * * *
+* * * *
+
+*/
+void question14()
+{
+    for (int i = 1; i <= 4; i++)
+    {
+        for (int j = 1; j <= 4 - i; j++)
+        {
+            printf(" ");
+        }
+        for (int j = 1; j <= i; j++)
+        {
+            printf("* ");
+        }
+        for (int j = 1; j <= 4 - i; j++)
+        {
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+
+/* Question Number 17
+17. Write a C program to make such a pattern like a pyramid with a number which will repeat the number in the same row.
+
+   1
+  2 2
+ 3 3 3
+4 4 4 4
+*/
+void question17()
+{
+    for (int i = 1; i <= 4; i++)
+    {
+        for (int j = 1; j <= 4 - i; j++)
+        {
+            printf(" ");
+        }
+        for (int j = 1; j <= i; j++)
+        {
+            printf("%d ", i);
+        }
+        for (int j = 1; j <= 4 - i; j++)
+        {
+            printf(" ");
         }
         printf("\n");
     }
