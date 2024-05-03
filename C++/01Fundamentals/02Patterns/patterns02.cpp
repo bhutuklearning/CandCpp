@@ -153,7 +153,7 @@ void pattern16a()
 //       A B A
 //     A B C B A
 //   A B C D C B A
-// A B C D E C D B A
+// A B C D E D C B A
 void pattern17(int &n)
 {
     cout << "Pattern 17\n";
