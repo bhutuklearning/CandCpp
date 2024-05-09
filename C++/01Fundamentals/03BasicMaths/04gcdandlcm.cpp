@@ -20,7 +20,7 @@ int main()
     }
     cout << "GCD is: " << gcd << "\n";
     // LCM program
-    for (int i = 1; i < num1 * num2; i++)
+    for (int i = 1; i <= num1 * num2; i++)
     {
         if (i % num1 == 0 && i % num2 == 0)
         {
